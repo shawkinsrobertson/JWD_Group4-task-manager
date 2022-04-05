@@ -18,39 +18,67 @@
     </header>
 
     <main>
-        <form>
 
-
-
-
-
-
-
-        </form>
-        <!--Card 1: Seamus-->
-        <div class="container">
+        <!-- Form section -->
+        <div class="container mx-auto">
             <div class="row">
-                <div class="col">
-                    <div class="card border-danger mb-3" style="max-width: 18rem;">
-                        <div class="card-header-1">To-Do</div>
-                        <div class="card-body text-danger">
-                          <p class="card-text-task">Use bootstrap to code an example to-do card for Group-4 project.</p>
-                          <p class="card-text"><span class="card-emphasis">Assigned: </span>Seamus.</p>
-                          <p class="card-text"><span class="card-emphasis">Date Due: </span>04.05.2022</p>
-                          <p class="card-text"><span class="card-emphasis">Status: </span>To-Do</p>
+                <div class="col-md-9 col-lg-7 mx-auto">
+                    <form>
+
+                        <div class="form-group row">
+                            <label for="task-name" class="col-sm-3 col-md-2 col-form-label">Task Name*</label>
+                            <div class="col-sm-9 col-md-10">
+                                <input type="text" class="form-control" id="task-name" placeholder="Task name" required>
+                            </div>
                         </div>
-                        <div class="card-footer bg-transparent border-danger">
-                            <label id="change-status">Update Status</label>
-                            <select id="dropdown" type="dropdown">
-                                 <option disabled selected value>To-Do</option>
-                                 <option value="in-progress">In Progress</option>
-                                 <option value="completed">Completed</option>
-                            </select>
+
+                        <div class="form-group row">
+                            <label for="description" class="col-sm-3 col-md-2 col-form-label">Description</label>
+                            <div class="col-sm-9 col-md-10">
+                                <textarea class="form-control" id="description" rows="1" placeholder="Write your description here"></textarea>
+                            </div>
                         </div>
-                    </div>
+
+                        <div class="form-group row">
+                            <label for="assign-to" class="col-sm-3 col-md-2 col-form-label">Assign To*</label>
+                            <div class="col-sm-9 col-md-10">
+                                <input type="text" class="form-control" id="assign-to" placeholder="Task for whom" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="date" class="col-sm-3 col-md-2 col-form-label">Due Date*</label>
+                            <div class="col-sm-9 col-md-10">
+                                <input type="date" class="form-control" id="date" required>
+                                <!--the reason why input is highlighted: input[type=date]' is not supported by Internet Explorer-->
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-5">
+                            <label for="status" class="col-sm-3 col-md-2 col-form-label">Status*</label>
+                            <div class="col-sm-9 col-md-10">
+                                <select class="custom-select" id="status" required>
+                                  <option value="" selected>Select a status</option>
+                                  <option value="1">To do</option>
+                                  <option value="2">In progress</option>
+                                  <option value="3">Done</option>
+                              </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group text-center">
+                            <div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
+
             </div>
         </div>
+        <!-- End of the Form section -->
+        <!--Card 1-->
+
 
 
 
