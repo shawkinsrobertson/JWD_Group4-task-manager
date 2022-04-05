@@ -17,3 +17,15 @@
    background-color: rgb(250, 163, 179);
    height: 65px;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(0, 255, 170);
+    color: rgb(15, 5, 5);
+    text-align: center;
+    font-weight: bold;
+  }
+  

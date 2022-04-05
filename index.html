@@ -12,48 +12,39 @@
 <body>
 
     <header>
-        <h1 class="font-weight-bold text-center">
- Task Manager
-        </h1>
+        <h1 class="font-weight-bold text-center">Task Manager</h1>
     </header>
-
     <main>
-
         <!-- Form section -->
         <div class="container mx-auto">
             <div class="row">
                 <div class="col-md-9 col-lg-7 mx-auto">
                     <form>
-
                         <div class="form-group row">
                             <label for="task-name" class="col-sm-3 col-md-2 col-form-label">Task Name*</label>
                             <div class="col-sm-9 col-md-10">
                                 <input type="text" class="form-control" id="task-name" placeholder="Task name" required>
                             </div>
                         </div>
-
                         <div class="form-group row">
                             <label for="description" class="col-sm-3 col-md-2 col-form-label">Description</label>
                             <div class="col-sm-9 col-md-10">
                                 <textarea class="form-control" id="description" rows="1" placeholder="Write your description here"></textarea>
                             </div>
                         </div>
-
                         <div class="form-group row">
                             <label for="assign-to" class="col-sm-3 col-md-2 col-form-label">Assign To*</label>
                             <div class="col-sm-9 col-md-10">
                                 <input type="text" class="form-control" id="assign-to" placeholder="Task for whom" required>
                             </div>
                         </div>
-
                         <div class="form-group row">
                             <label for="date" class="col-sm-3 col-md-2 col-form-label">Due Date*</label>
                             <div class="col-sm-9 col-md-10">
                                 <input type="date" class="form-control" id="date" required>
                                 <!--the reason why input is highlighted: input[type=date]' is not supported by Internet Explorer-->
                             </div>
-                        </div>
-
+                        </div
                         <div class="form-group row mb-5">
                             <label for="status" class="col-sm-3 col-md-2 col-form-label">Status*</label>
                             <div class="col-sm-9 col-md-10">
@@ -65,7 +56,6 @@
                               </select>
                             </div>
                         </div>
-
                         <div class="form-group text-center">
                             <div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -73,49 +63,79 @@
                         </div>
                     </form>
                 </div>
-
             </div>
         </div>
         <!-- End of the Form section -->
         <!--Card 1-->
         <div class="container">
-
-         <div class="row">
-          <div class="col-4">
-            <div class="card border-success mb-3" style="max-width: 18rem;">
-              <div class="card-header bg-transparent border-success font-weight-bold">To Do</div>
-              <div class="card-body text-success">
-                <h5 class="card-title">Task Name</h5>
-                <p class="card-text">Assigned to: <br>Due Date:<br></p>
-              </div>
-              <div class="card-footer bg-transparent border-success"><button type="button" class="btn btn-primary">Start Task</button>
-                <button type="button" class="btn btn-success">Mark as Done</button></div>
+            <div class="row">
+                
+                <div class="col-4">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="card border-success mb-3" style="max-width: 18rem;">
+                            <div class="card-header bg-transparent border-success font-weight-bold">In Progress</div>
+                            <div class="card-body text-success">
+                                <h5 class="card-title">Task Name</h5>
+                                 <p class="card-text">Assigned to: <br>Due Date:<br></p>
+                            </div>
+                            <div class="card-footer bg-transparent border-success"><button type="button" class="btn btn-primary">Start Task</button>
+                            <button type="button" class="btn btn-success">Mark as Done</button></div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="card border-success mb-3" style="max-width: 18rem;">
+                                <div class="card-header bg-transparent border-success font-weight-bold">To Do</div>
+                                <div class="card-body text-success">
+                                    <h5 class="card-title">Task Name</h5>
+                                    <p class="card-text">Assigned to: <br>Due Date:<br></p>
+                                </div>
+                            <div class="card-footer bg-transparent border-success"><button type="button" class="btn btn-primary">Start Task</button>
+                            <button type="button" class="btn btn-success">Mark as Done</button></div>
+                        </li>
+                
             </div>
-          </div>
-          <div class="col-4">
-            <div class="card border-success mb-3" style="max-width: 18rem;">
-              <div class="card-header bg-transparent border-success font-weight-bold">In Progress</div>
-              <div class="card-body text-success">
-                <h5 class="card-title">Task Name</h5>
-                <p class="card-text">Assigned to: <br>Due Date:<br></p>
-              </div>
-              <div class="card-footer bg-transparent border-success"><button type="button" class="btn btn-primary">Start Task</button>
-                <button type="button" class="btn btn-success">Mark as Done</button></div>
+            <div class="col-4">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="card border-success mb-3" style="max-width: 18rem;">
+                        <div class="card-header bg-transparent border-success font-weight-bold">Done</div>
+                        <div class="card-body text-success">
+                            <h5 class="card-title">Task Name</h5>
+                            <p class="card-text">Assigned to: <br>Due Date:<br></p>
+                        </div>
+                        <div class="card-footer bg-transparent border-success">
+                        <button type="button" class="btn btn-primary">Start Task</button>
+                        <button type="button" class="btn btn-success">Mark as Done</button></div>
+                    </li>
+                </ul>
             </div>
-          </div>
-          <div class="col-4">
-            <div class="card border-success mb-3" style="max-width: 18rem;">
-              <div class="card-header bg-transparent border-success font-weight-bold">Done</div>
-              <div class="card-body text-success">
-                <h5 class="card-title">Task Name</h5>
-                <p class="card-text">Assigned to: <br>Due Date:<br></p>
-              </div>
-              <div class="card-footer bg-transparent border-success">
-                <button type="button" class="btn btn-primary">Start Task</button>
-                <button type="button" class="btn btn-success">Mark as Done</button>
-               </div>
+            <div class="col-4">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="card border-success mb-3" style="max-width: 18rem;">
+                        <div class="card-header bg-transparent border-success font-weight-bold">Done</div>
+                        <div class="card-body text-success">
+                            <h5 class="card-title">Task Name</h5>
+                            <p class="card-text">Assigned to: <br>Due Date:<br></p>
+                        </div>
+                        <div class="card-footer bg-transparent border-success">
+                        <button type="button" class="btn btn-primary">Start Task</button>
+                        <button type="button" class="btn btn-success">Mark as Done</button></div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="card border-success mb-3" style="max-width: 18rem;">
+                        <div class="card-header bg-transparent border-success font-weight-bold">Done</div>
+                        <div class="card-body text-success">
+                            <h5 class="card-title">Task Name</h5>
+                            <p class="card-text">Assigned to: <br>Due Date:<br></p>
+                        </div>
+                        <div class="card-footer bg-transparent border-success">
+                        <button type="button" class="btn btn-primary">Start Task</button>
+                        <button type="button" class="btn btn-success">Mark as Done</button></div>
+                    </li>
+                </ul>
             </div>
-          </div>
+        </div>
        
           
         
@@ -128,23 +148,7 @@
 
 
 
-    </main>
-
-    <footer>
-      
-      <style>
-        .footer {
-          position: fixed;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          background-color: rgb(0, 255, 170);
-          color: rgb(15, 5, 5);
-          text-align: center;
-          font-weight: bold;
-        }
-        </style>
-        
+</main>
         <div class="footer">
           <p>Prepared by Marina Kosova, Radhika, S. H. Robertson, Yuliya Belousenko and Gedamnesh Derbabaw <br>
             Date : 4/4/2022</p>
