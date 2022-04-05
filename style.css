@@ -1,23 +1,3 @@
-.card-header-1, 
-.card-emphasis,
-.card-text-task{
-    font-weight: bold;
-}
-
-.card-header-1,
-.card-text-task {
-    text-align: center;
-   
-}
-
-.card-header-1{
-   padding-top: 9px;
-   text-transform: uppercase;
-   color: red;
-   background-color: rgb(250, 163, 179);
-   height: 65px;
-}
-
 .footer {
     position: fixed;
     left: 0;
