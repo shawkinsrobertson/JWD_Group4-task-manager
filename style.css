@@ -26,6 +26,13 @@ form{
   
 }
 
+/*---cards---*/
+
+.archive-img {
+  background-color: transparent;
+  color: white;
+}
+
 /*---footer---*/
 
 .footer {
