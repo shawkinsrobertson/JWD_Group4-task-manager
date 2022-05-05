@@ -19,6 +19,8 @@ newTaskForm.addEventListener('submit', (event) => {
         Validation code here
     */
 
+        
+
     // Get the values of the inputs
     const name = newTaskNameInput.value;
     const description = newTaskDescription.value;
