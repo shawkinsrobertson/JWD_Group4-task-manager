@@ -19,7 +19,12 @@ newTaskForm.addEventListener('submit', (event) => {
         Validation code here
     */
 
-        
+    if (validFormFieldInput(name)) {
+        addTask(newTaskNameInput, newTaskDescription, newTaskAssignedTo, newTaskDueDate);
+    }
+
+    //clear the values of the inputs after calling addTask
+    
 
     // Get the values of the inputs
     const name = newTaskNameInput.value;
