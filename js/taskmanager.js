@@ -6,6 +6,7 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
                                  <p class="card-text"> ${description} </p>
                                  <p class="card-text"> ${assignedTo} </p>
                                  <p class="card-text"> ${dueDate} </p>
+                                 <p class="card-text"> ${status} </p>
                             </div>
                             <div class="card-footer bg-transparent border-danger"><button type="button" class="btn btn-primary">▶︎</button>
                             <button type="button" class="btn btn-success">✓</button></div>
@@ -14,15 +15,33 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
 }
 
 class taskManager {
-   constructor(task, currentId) {
+   constructor(currentId = 0) {
        this.task = [];
-       this.currentId = 0;
+       this.currentId = currentId;
     }
 
     addTask(name, description, assignedTo, dueDate){
-        let status = 'TODO';
-        this.currentId ++;
-        this.task.push(this.currentId, name, description, assignedTo, dueDate, status);
+        const task = {
+        id: this.currentId ++;
+        name: name;
+        description: description;
+        assignedTo: assignedTo;
+        dueDate: dueDate;
+        status: 'TODO'
+        };
+
+        this.task.push(task);
+       }
+
+       render(){
+           let tasksHtmlList = [];
+
+           for (i = 0; i < taskManager.task.length; i ++) {
+               let currTask = taskManager.task[i];
+               let date = new Date(dueDate);
+               let formattedDate = ''
+           }
+
        }
   
 }
