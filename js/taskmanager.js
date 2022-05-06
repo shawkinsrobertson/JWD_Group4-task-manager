@@ -22,11 +22,11 @@ class taskManager {
 
     addTask(name, description, assignedTo, dueDate){
         const task = {
-        id: this.currentId ++;
-        name: name;
-        description: description;
-        assignedTo: assignedTo;
-        dueDate: dueDate;
+        id: this.currentId ++,
+        name: name,
+        description: description,
+        assignedTo: assignedTo,
+        dueDate: dueDate,
         status: 'TODO'
         };
 
