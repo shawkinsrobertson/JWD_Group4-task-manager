@@ -39,9 +39,13 @@ class taskManager {
            for (i = 0; i < taskManager.task.length; i ++) {
                let currTask = taskManager.task[i];
                let date = new Date(dueDate);
-               let formattedDate = ''
+               let formattedDate = `Due: ${date}`;
            }
 
+           const taskHtml = createTaskHtml(currTask, formattedDate)
+           tasksHtmlList.push(taskHtml);
+
+           const tasksHtml = tasksHtmlList.join('\n');
        }
   
 }
