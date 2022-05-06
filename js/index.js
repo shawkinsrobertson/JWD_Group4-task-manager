@@ -14,23 +14,28 @@ newTaskForm.addEventListener('submit', (event) => {
     const newTaskDueDate = document.querySelector('#newTaskDueDate');
     const errorMessage = document.querySelector('#alertMessage');
     
-    
-    /*
-        Validation code here
-    */
-
-    if (validFormFieldInput(name)) {
-        addTask(newTaskNameInput, newTaskDescription, newTaskAssignedTo, newTaskDueDate);
-    }
-
-    //clear the values of the inputs after calling addTask
-    
-
     // Get the values of the inputs
     const name = newTaskNameInput.value;
     const description = newTaskDescription.value;
     const assignedTo = newTaskAssignedTo.value;
     const dueDate = newTaskDueDate.value;
+    /*
+        Validation code here
+    */
+
+    if (validFormFieldInput(name)) {
+        addTask(name, description, assignedTo, dueDate);
+    }
+
+    //clear the values of the inputs after calling addTask
+        newTaskNameInput.value = '';
+        newTaskDescription.value = '';
+        newTaskAssignedTo.value = '';
+        newTaskDueDate.value = '';
+
+    
+
+    //validation code error message
     if(!validFormFieldInput(name)){
         errorMessage.innerHTML = "Invalid name input";
         errorMessage.style.display = "block"
