@@ -85,7 +85,7 @@ listOfTasks.addEventListener('click', (event) => {
         taskManager.render();
     }
 
-    if (event.targe.classList.contains('delete-button')) {
+    if (event.target.classList.contains('delete-button')) {
         const parentTask = event.target.parentElement.parentElement.parentElement;
 
         const taskId = Number(parentTask.dataset.taskId);
