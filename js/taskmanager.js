@@ -1,5 +1,5 @@
-const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
-   return `<li class="list-group-item">
+const createTaskHtml = (name, description, assignedTo, dueDate, status, id) => {
+   return `<li data-task-id= "${id}" class="list-group-item">
                             <div class="card border-danger mb-3" style="max-width: 18rem;">
                             <div class="card-header bg-transparent border-danger font-weight-bold"> ${name} </div>
                             <div class="card-body text-danger">
@@ -42,7 +42,7 @@ class TaskManager {
                let formattedDate = `Due: ${date}`;
            
 
-           const taskHtml = createTaskHtml(task.name, task.description, task.assignedTo, formattedDate, task.status);
+           const taskHtml = createTaskHtml(task.name, task.description, task.assignedTo, formattedDate, task.status, task.id);
            tasksHtmlList.push(taskHtml);
            }
 
