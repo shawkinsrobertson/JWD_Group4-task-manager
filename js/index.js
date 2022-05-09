@@ -36,6 +36,8 @@ newTaskForm.addEventListener('submit', (event) => {
     //Add task
     taskManager.addTask(name, description, assignedTo, dueDate);
 
+    taskManager.save();
+
     taskManager.render();
 
     //clear the values of the inputs after calling addTask
@@ -76,9 +78,12 @@ listOfTasks.addEventListener('click', (event) => {
         
         console.log(parentTask);
 
+        taskManager.save();
+
         taskManager.render();
     }
    
 
-    taskManager.save();
+   
 });  
+
