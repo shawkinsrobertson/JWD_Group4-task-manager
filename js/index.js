@@ -32,6 +32,8 @@ newTaskForm.addEventListener('submit', (event) => {
     //Add task
     taskManager.addTask(name, description,assignedTo, dueDate);
 
+    taskManager.render();
+
     //clear the values of the inputs after calling addTask
         newTaskNameInput.value = '';
         newTaskDescription.value = '';
@@ -53,3 +55,20 @@ newTaskForm.addEventListener('submit', (event) => {
 function validFormFieldInput(data){
     return data !== null && data !== '';
 }
+
+const taskListVar = document.querySelector('#listOfTasks');
+
+listOfTasks.addEventListener('click', (event) => {
+
+    if (event.target.classList.contains('done-button')) {
+        const parentTask = event.target.parentElement.parentElement;
+
+        const taskId = Number(prentTask.dataset.taskId);
+
+        const task = taskManager.getTaskById(taskId);
+
+        task.status = 'DONE';
+
+        taskManager.render();
+    }
+});
