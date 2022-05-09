@@ -1,3 +1,5 @@
+//Initialize new task manager
+const taskManager = new taskManager(0);
 
 // Select the New Task Form
 const newTaskForm = document.querySelector('#newTaskForm');
@@ -23,9 +25,12 @@ newTaskForm.addEventListener('submit', (event) => {
         Validation code here
     */
 
-    if (validFormFieldInput(name)) {
+    /*if (validFormFieldInput(name)) {
         addTask(name, description, assignedTo, dueDate);
-    }
+    }*/
+
+    //Add task
+    taskManager.addTask(name, description,assignedTo, dueDate);
 
     //clear the values of the inputs after calling addTask
         newTaskNameInput.value = '';
