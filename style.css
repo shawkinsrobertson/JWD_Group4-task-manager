@@ -5,28 +5,32 @@
   color: rgb(255,255,255);
 }
 
-/*---logo---*/
-
-#logo {
-  display: inline-block;
-  text-align: center;
-  width: 300px;
-  height: 200px;
-
+/*---header---*/
+header {
+  background-color: black;
+  
+  
 }
 
-#hand-emoji {
-    font-size: 63px;
+h1 {
+  text-align: left;
+  padding: 2rem;
+  margin-bottom: 0;
 }
 
 /*---form---*/
 
 form{
   display: inline-block;
-  
+  padding-top: 1rem;
 }
 
 /*---cards---*/
+
+#tasklist-header {
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
 
 .list-group-item {
   background-color: black;
