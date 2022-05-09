@@ -14,7 +14,7 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
 
 }
 
-class taskManager {
+class TaskManager {
    constructor(currentId = 0) {
        this.task = [];
        this.currentId = currentId;
@@ -56,10 +56,10 @@ class taskManager {
 
        save() {
         const tasksJson = JSON.stringify(this.task);
-        localStorage.setItem('tasks', 'tasksJson');
+        localStorage.setItem('tasks', tasksJson);
 
         const currentId = this.currentId;
-        localStorage.setItem('currentId', 'currentId');
+        localStorage.setItem('currentId', currentId);
 
  
     }

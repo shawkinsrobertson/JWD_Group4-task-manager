@@ -1,5 +1,6 @@
-//Initialize new task manager
-const taskManager = new taskManager(0);
+//initialize a new task manager
+const taskManager = new TaskManager(0);
+console.log(taskManager.task);
 
 // Select the New Task Form
 const newTaskForm = document.querySelector('#newTaskForm');
@@ -30,9 +31,9 @@ newTaskForm.addEventListener('submit', (event) => {
     }*/
 
     //Add task
-    taskManager.addTask(name, description,assignedTo, dueDate);
+    TaskManager.addTask(name, description,assignedTo, dueDate);
 
-    taskManager.render();
+    TaskManager.render();
 
     //clear the values of the inputs after calling addTask
         newTaskNameInput.value = '';
@@ -72,5 +73,5 @@ listOfTasks.addEventListener('click', (event) => {
         taskManager.render();
     }
 
-    taskManager.save();
-});
+    TaskManager.save();
+});  
