@@ -36,7 +36,7 @@ class TaskManager {
        render(){
            let tasksHtmlList = [];
 
-           for (i = 0; i < this.task.length; i ++) {
+           for (let i = 0; i < this.task.length; i ++) {
                let task = this.task[i];
                let date = new Date(task.dueDate);
                let formattedDate = `Due: ${date}`;
@@ -48,7 +48,7 @@ class TaskManager {
 
            const tasksHtml = tasksHtmlList.join('\n');
 
-           const taskList = document.querySelector('#taskList');
+           const taskList = document.querySelector('#listOfTasks');
            taskList.innerHTML = tasksHtml;
 
           

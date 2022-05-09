@@ -31,9 +31,9 @@ newTaskForm.addEventListener('submit', (event) => {
     }*/
 
     //Add task
-    TaskManager.addTask(name, description,assignedTo, dueDate);
+    taskManager.addTask(name, description, assignedTo, dueDate);
 
-    TaskManager.render();
+    taskManager.render();
 
     //clear the values of the inputs after calling addTask
         newTaskNameInput.value = '';
@@ -64,7 +64,7 @@ listOfTasks.addEventListener('click', (event) => {
     if (event.target.classList.contains('done-button')) {
         const parentTask = event.target.parentElement.parentElement;
 
-        const taskId = Number(prentTask.dataset.taskId);
+        const taskId = Number(parentTask.dataset.taskId);
 
         const task = taskManager.getTaskById(taskId);
 
@@ -73,5 +73,5 @@ listOfTasks.addEventListener('click', (event) => {
         taskManager.render();
     }
 
-    TaskManager.save();
+    taskManager.save();
 });  
