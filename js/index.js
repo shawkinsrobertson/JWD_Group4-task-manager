@@ -64,7 +64,11 @@ listOfTasks.addEventListener('click', (event) => {
     if (event.target.classList.contains('done-button')) {
         const parentTask = event.target.parentElement.parentElement.parentElement;
 
+        const taskId = Number(parentTask.dataset.taskId);
         
+        const task = taskManager.getTaskById(taskId);
+
+        task.status = 'DONE';
         
         console.log(parentTask);
 

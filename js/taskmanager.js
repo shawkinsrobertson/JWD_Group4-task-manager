@@ -63,5 +63,17 @@ class TaskManager {
 
  
     }
+
+    getTaskById(taskId) {
+        let foundTask;
+         for (let i = 0; i < this.task.length; i ++) {
+            let task = this.task[i];
+            if (task.id === taskId) {
+                foundTask = task;
+
+            }
+            return foundTask;
+        }
+    }
   
 }
