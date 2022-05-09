@@ -28,6 +28,10 @@ form{
 
 /*---cards---*/
 
+.list-group-item {
+  background-color: black;
+}
+
 .archive-img {
   background-color: transparent;
   color: white;
