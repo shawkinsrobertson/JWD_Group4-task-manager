@@ -1,14 +1,14 @@
 const createTaskHtml = (name, description, assignedTo, dueDate, status, id) => {
    return `<li class="list-group-item" data-task-id=${id}>
                             <div class="card border-danger mb-3" style="max-width: 18rem;">
-                            <div class="card-header bg-transparent border-danger font-weight-bold"> ${name} </div>
+                            <div class="card-header bg-dark border-danger font-weight-bold"> ${name} </div>
                             <div class="card-body text-danger">
                                  <p class="card-text"> ${description} </p>
                                  <p class="card-text"> ${assignedTo} </p>
                                  <p class="card-text"> ${dueDate} </p>
                                  <p class="card-text"> ${status} </p>
                             </div>
-                            <div class="card-footer bg-transparent border-danger"><button type="button" class="btn btn-primary">▶︎</button>
+                            <div class="card-footer bg-dark border-danger"><button type="button" class="btn btn-primary">▶︎</button>
                             <button type="button" class="btn btn-success done-button">✓</button>
                             <button type="button" class="btn btn-danger delete-button">X</button></div>
                         </li>`;
