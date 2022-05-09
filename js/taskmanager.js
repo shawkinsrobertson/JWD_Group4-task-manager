@@ -72,8 +72,8 @@ class TaskManager {
                 foundTask = task;
 
             }
-            return foundTask;
         }
+        return foundTask;
     }
 
     load() {

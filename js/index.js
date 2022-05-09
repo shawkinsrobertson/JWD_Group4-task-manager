@@ -76,7 +76,9 @@ listOfTasks.addEventListener('click', (event) => {
 
         task.status = 'DONE';
         
-        console.log(parentTask);
+        /*console.log(parentTask);
+        console.log(taskId);
+        console.log(task);*/
 
         taskManager.save();
 
