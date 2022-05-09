@@ -2,6 +2,9 @@
 const taskManager = new TaskManager(0);
 console.log(taskManager.task);
 
+taskManager.load();
+taskManager.render();
+
 // Select the New Task Form
 const newTaskForm = document.querySelector('#newTaskForm');
 
@@ -59,6 +62,7 @@ function validFormFieldInput(data){
 
 const taskListVar = document.querySelector('#listOfTasks');
 
+//change status to DONE when clicking mark as done
 listOfTasks.addEventListener('click', (event) => {
 
     if (event.target.classList.contains('done-button')) {
