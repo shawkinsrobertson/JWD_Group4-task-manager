@@ -50,6 +50,16 @@ class taskManager {
 
            const taskList = document.querySelector('#taskList');
            taskList.innerHTML = tasksHtml;
+
+           save() {
+               const tasksJson = JSON.stringify(this.task);
+               localStorage.setItem('tasks', 'tasksJson');
+               
+               const currentId = this.currentId;
+               localStorage.setItem('currentId', 'currentId');
+
+        
+           }
        }
   
 }

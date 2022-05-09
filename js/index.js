@@ -71,4 +71,6 @@ listOfTasks.addEventListener('click', (event) => {
 
         taskManager.render();
     }
+
+    taskManager.save();
 });
