@@ -1,5 +1,5 @@
 const createTaskHtml = (name, description, assignedTo, dueDate, status, id) => {
-   return `<li data-task-id= "${id}" class="list-group-item">
+   return `<li class="list-group-item" data-task-id=${id}>
                             <div class="card border-danger mb-3" style="max-width: 18rem;">
                             <div class="card-header bg-transparent border-danger font-weight-bold"> ${name} </div>
                             <div class="card-body text-danger">
@@ -67,7 +67,7 @@ class TaskManager {
     getTaskById(taskId) {
         let foundTask;
          for (let i = 0; i < this.task.length; i ++) {
-            let task = this.task[i];
+            const task = this.task[i];
             if (task.id === taskId) {
                 foundTask = task;
 
