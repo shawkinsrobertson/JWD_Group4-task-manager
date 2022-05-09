@@ -36,16 +36,20 @@ class taskManager {
        render(){
            let tasksHtmlList = [];
 
-           for (i = 0; i < taskManager.task.length; i ++) {
-               let currTask = taskManager.task[i];
-               let date = new Date(dueDate);
+           for (i = 0; i < this.task.length; i ++) {
+               let task = this.task[i];
+               let date = new Date(task.dueDate);
                let formattedDate = `Due: ${date}`;
+           
+
+           const taskHtml = createTaskHtml(task.name, task.description, task.assignedTo, formattedDate, task.status);
+           tasksHtmlList.push(taskHtml);
            }
 
-           const taskHtml = createTaskHtml(currTask, formattedDate)
-           tasksHtmlList.push(taskHtml);
-
            const tasksHtml = tasksHtmlList.join('\n');
+
+           const taskList = document.querySelector('#taskList');
+           taskList.innerHTML = tasksHtml;
        }
   
 }
