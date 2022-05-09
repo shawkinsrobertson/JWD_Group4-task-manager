@@ -9,7 +9,7 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
                                  <p class="card-text"> ${status} </p>
                             </div>
                             <div class="card-footer bg-transparent border-danger"><button type="button" class="btn btn-primary">▶︎</button>
-                            <button type="button" class="btn btn-success">✓</button></div>
+                            <button type="button" class="btn btn-success done-button">✓</button></div>
                         </li>`;
 
 }
