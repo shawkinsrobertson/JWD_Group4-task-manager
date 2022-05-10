@@ -1,5 +1,8 @@
 var assert = require('assert');
 const { isRegExp } = require('util/types');
+const taskMgr = require('../js/taskmanager');
+const jsIndex = require('../js/index');
+
 describe('Array', function () {
     describe('#indexOf()', function() {
         it('should return -1 when the value is not present', function() {
