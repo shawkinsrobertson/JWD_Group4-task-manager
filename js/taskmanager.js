@@ -8,7 +8,8 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status, id) => {
                                  <p class="card-text"> Due: ${dueDate} </p>
                                  <p class="card-text"> Status: ${status} </p>
                             </div>
-                            <!-- <button type="button" class="btn btn-primary">▶︎</button>-->
+                            <div id="cardButtons">
+                            <!--<button type="button" class="btn btn-primary">▶︎</button>-->
                             <button type="button" class="btn btn-success done-button">✓</button>
                             <button type="button" class="btn btn-danger delete-button">X</button></div>
                         </li>`;
