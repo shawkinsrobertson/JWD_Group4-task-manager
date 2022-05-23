@@ -3,12 +3,12 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status, id) => {
                             <div class="card border-danger mb-3" style="max-width: 18rem;">
                             <div class="card-header bg-dark border-danger font-weight-bold"> ${name} </div>
                             <div class="card-body text-danger">
-                                 <p class="card-text"> ${description} </p>
-                                 <p class="card-text"> ${assignedTo} </p>
-                                 <p class="card-text"> ${dueDate} </p>
-                                 <p class="card-text"> ${status} </p>
+                                 <p class="card-text"> Description: ${description} </p>
+                                 <p class="card-text"> Assigned To: ${assignedTo} </p>
+                                 <p class="card-text"> Due: ${dueDate} </p>
+                                 <p class="card-text"> Status: ${status} </p>
                             </div>
-                            <div class="card-footer bg-dark border-danger"><button type="button" class="btn btn-primary">▶︎</button>
+                            <!-- <button type="button" class="btn btn-primary">▶︎</button>-->
                             <button type="button" class="btn btn-success done-button">✓</button>
                             <button type="button" class="btn btn-danger delete-button">X</button></div>
                         </li>`;

@@ -17,7 +17,7 @@
         <!-- Form section -->
         <div class="container mx-auto">
             <div class="row">
-                <div id="formDiv">
+                <div class="col-5 mx-auto">
                     <form id="newTaskForm">
                         <header id="form-header">Create A New Task</header>
                         <div class="form-group row">
@@ -42,7 +42,6 @@
                             <label for="newTaskDueDate" class="form-label">Due Date*</label>
                             <div class="form-input">
                                 <input type="date" class="form-control" id="newTaskDueDate" required>
-                                <!--the reason why input is highlighted: input[type=date]' is not supported by Internet Explorer-->
                             </div>
                           </div>
                         <div class="form-group row mb-5">
@@ -51,7 +50,7 @@
                                 <select class="custom-select" id="status" required>
                                   <option value="" selected>Select a status</option>
                                   <option value="1">To do</option>
-                                  <option value="2">In progress</option>
+                                  <!--<option value="2">In progress</option>-->
                                   <option value="3">Done</option>
                               </select>
                             </div>
@@ -61,16 +60,13 @@
                                 Error message    
                             </div>
                             <div>
-                                <button type="submit" class="btn btn-primary">＋</button>
-                                <button type="reset" class="btn btn-primary">&#8635</button>
+                                <button id ="formSubmitButton" type="submit" class="btn btn-primary">＋</button>
+                                <button id="formResetButton" type="reset" class="btn btn-primary">&#8635</button>
                             </div>
                         </div>
                     </form>
                 </div>
-                <div id="spacer-col" class="col-2">
-                    <div></div>
-                    <div></div>
-                </div>
+               
                 <div id="task-column" class="col-5">
                     <h2 id="tasklist-header">Tasks</h2>
                     <ul id="listOfTasks" class="list-group">
@@ -83,74 +79,16 @@
                                  <p class="card-text">Due Date:</p>
                                  <p class="card-text">Status:</p>
                             </div>
-                            <div class="card-footer bg-transparent border-danger"><button type="button" class="btn btn-primary">▶︎</button>
-                            <button type="button" class="btn btn-success done-button">✓</button></div>
-                            <button type="button" class="btn btn-danger delete-button">X</button></div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="card border-danger mb-3" style="max-width: 18rem;">
-                                <div class="card-header bg-transparent border-danger font-weight-bold">Task Name</div>
-                                <div class="card-body text-danger">
-                                     <p class="card-text">Description</p>
-                                     <p class="card-text">Assigned to:</p>
-                                     <p class="card-text">Due Date:</p>
-                                     <p class="card-text">Status:</p>
+                            <!--for the future: add "in progress" functionality-->
+                            <!--<div class="card-footer bg-transparent border-danger"><button type="button" class="btn btn-primary">▶︎</button>-->
+                                <div>
+                            <button type="button" class="btn btn-success done-button">✓</button>
+                            <button type="button" class="btn btn-danger delete-button">X</button>
                                 </div>
-                                <div class="card-footer bg-transparent border-danger"><button type="button" class="btn btn-primary">▶︎</button>
-                                <button type="button" class="btn btn-success done-button">✓</button></div>
                         </li>
-                        <li class="list-group-item">
-                            <div class="card border-success mb-3" style="max-width: 18rem;">
-                            <div class="card-header bg-transparent border-success font-weight-bold">Task Name</div>
-                            <div class="card-body text-success">
-                                     <p class="card-text">Description</p>
-                                     <p class="card-text">Assigned to:</p>
-                                     <p class="card-text">Due Date:</p>
-                                     <p class="card-text">Status:</p>
-                            </div>
-                            <div class="card-footer bg-transparent border-success">
-                                <button type="button" class="btn btn-primary">▶︎</button>
-                                <button type="button" class="btn btn-success done-button">✓</button></div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="card border-success mb-3" style="max-width: 18rem;">
-                            <div class="card-header bg-transparent border-success font-weight-bold">Doing</div>
-                            <div class="card-body text-success">
-                                <p class="card-text">Description</p>
-                                <p class="card-text">Assigned to:</p>
-                                <p class="card-text">Due Date:</p>
-                                <p class="card-text">Status:</p>
-                            </div>
-                            <div class="card-footer bg-transparent border-success">
-                                <button type="button" class="btn btn-primary">▶︎</button>
-                                <button type="button" class="btn btn-success done-button">✓</button></div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="card border-success mb-3" style="max-width: 18rem;">
-                            <div class="card-header bg-transparent border-success font-weight-bold">Done</div>
-                            <div class="card-body text-success">
-                                <p class="card-text">Description</p>
-                                <p class="card-text">Assigned to:</p>
-                                <p class="card-text">Due Date:</p>
-                                <p class="card-text">Status:</p>
-                            </div>
-                            <div class="card-footer bg-transparent border-success">
-                            <button type="button" class="btn btn-primary">Reopen</button>
-                            <button type="button" class="btn btn-success done-button"><img class ="archive-img" src="./archive.svg" alt="archive" /></button></div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="card border-success mb-3" style="max-width: 18rem;">
-                            <div class="card-header bg-transparent border-success font-weight-bold">Done</div>
-                            <div class="card-body text-success">
-                                <p class="card-text">Description</p>
-                                <p class="card-text">Assigned to:</p>
-                                <p class="card-text">Due Date:</p>
-                                <p class="card-text">Status:</p>
-                            </div>
-                            <div class="card-footer bg-transparent border-success">
-                            <button type="button" class="btn btn-primary">Reopen</button>
-                            <button type="button" class="btn btn-success done-button"><img class ="archive-img" src="./archive.svg" alt="archive" /></button></div>
-                        </li>
+                        
+                       
+                        
                     </ul>
                 </div>
             </div>
