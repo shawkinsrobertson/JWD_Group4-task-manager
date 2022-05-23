@@ -68,7 +68,7 @@ const taskListVar = document.querySelector('#listOfTasks');
 listOfTasks.addEventListener('click', (event) => {
 
     if (event.target.classList.contains('done-button')) {
-        const parentTask = event.target.parentElement.parentElement.parentElement;
+        const parentTask = event.target.parentElement.parentElement;
 
         const taskId = Number(parentTask.dataset.taskId);
         
@@ -86,7 +86,7 @@ listOfTasks.addEventListener('click', (event) => {
     }
 
     if (event.target.classList.contains('delete-button')) {
-        const parentTask = event.target.parentElement.parentElement.parentElement;
+        const parentTask = event.target.parentElement.parentElement;
 
         const taskId = Number(parentTask.dataset.taskId);
 
